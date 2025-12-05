@@ -1,22 +1,24 @@
 import { useState } from "react";
-import "./styles.css";
-import { About } from "./components/About.jsx";
-import { Research } from "./components/Research.jsx";
-import { TechStack } from "./components/TechStack.jsx";
-import { LabSkills } from "./components/LabSkills.jsx";
-import { FunProjects } from "./components/FunProjects.jsx";
-import { Contact } from "./components/Contact.jsx";
+import "./index.css";
+import About from "./components/About.jsx";
+import Research from "./components/Research.jsx";
+// import { TechStack } from "./components/TechStack.jsx";
+// import { LabSkills } from "./components/LabSkills.jsx";
+// import { FunProjects } from "./components/FunProjects.jsx";
+// import { Contact } from "./components/Contact.jsx";
 
 function App() {
   return (
-    <>
+    // <h1>Hello World</h1>
+
+    <div>
       <About />
       <Research />
-      <TechStack />
-      <LabSkills />
-      <FunProjects />
-      <Contact />
-    </>
+      {/* //   <TechStack />
+    //   <LabSkills />
+    //   <FunProjects />
+    //   <Contact /> */}
+    </div>
   );
 }
 
