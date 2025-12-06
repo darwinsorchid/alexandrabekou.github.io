@@ -3,7 +3,10 @@ import Navbar from "./NavBar.jsx";
 
 const About = () => {
   return (
-    <section className="bg-[#1e1e1e] min-h-screen flex flex-col text-white px-6 w-full md:px-16 lg:px-32 justify-center">
+    <section
+      id="about"
+      className="bg-[#1e1e1e] min-h-screen flex flex-col text-white px-6 w-full md:px-16 lg:px-32 justify-center"
+    >
       <Navbar />
       <div className="max-w-4xl mr-auto flex flex-col">
         <h1 className="text-4xl md:text-5xl font-normal tracking-normal uppercase leading-tight mb-0">

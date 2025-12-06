@@ -11,10 +11,22 @@ const navItems = [
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      const currentScrollY = window.scrollY;
+      setIsScrolled(currentScrollY > 10);
+
+      // Hide navbar when scrolling down, show when scrolling up
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+
+      setLastScrollY(currentScrollY);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -23,19 +35,18 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [lastScrollY]);
 
   return (
     <nav
-      className={`fixed top-0 right-0 z-50 transition-all duration-300 w-auto ${
+      className={`fixed top-0 right-0 z-50 transition-all duration-300 w-auto transform ${
         isScrolled
           ? "bg-background/80 backdrop-blur-md shadow-md"
           : "bg-transparent"
-      }`}
+      } ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
     >
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="flex justify-end items-center h-16">
-          {/* Logo or brand could go here */}
           <div className="hidden md:flex space-x-8">
             {navItems.map((item, index) => (
               <a
