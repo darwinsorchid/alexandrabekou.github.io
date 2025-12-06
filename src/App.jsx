@@ -2,9 +2,9 @@ import { useState } from "react";
 import "./index.css";
 import About from "./components/About.jsx";
 import Research from "./components/Research.jsx";
-// import { TechStack } from "./components/TechStack.jsx";
-// import { LabSkills } from "./components/LabSkills.jsx";
-// import { FunProjects } from "./components/FunProjects.jsx";
+import TechStack from "./components/TechStack.jsx";
+import LabSkills from "./components/LabSkills.jsx";
+import FunProjects from "./components/FunProjects.jsx";
 // import { Contact } from "./components/Contact.jsx";
 
 function App() {
@@ -14,10 +14,10 @@ function App() {
     <div className="flex flex-col gap-0 bg-[#1e1e1e]">
       <About />
       <Research />
-      {/* //   <TechStack />
-    //   <LabSkills />
-    //   <FunProjects />
-    //   <Contact /> */}
+      <TechStack />
+      <LabSkills />
+      <FunProjects />
+      {/* <Contact />  */}
     </div>
   );
 }
