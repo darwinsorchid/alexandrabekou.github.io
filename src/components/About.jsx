@@ -5,14 +5,14 @@ const About = () => {
   return (
     <section
       id="about"
-      className="bg-[#1e1e1e] min-h-screen flex flex-col text-white px-6 w-full md:px-16 lg:px-32 justify-center"
+      className="bg-[#0b010c] min-h-screen flex flex-col text-white px-6 w-full md:px-16 lg:px-32 justify-center"
     >
       <Navbar />
       <div className="max-w-4xl mr-auto flex flex-col">
-        <h1 className="text-4xl md:text-5xl font-normal tracking-normal uppercase leading-tight mb-0">
+        <h1 className="text-5xl md:text-5xl font-light tracking-normal uppercase leading-tight mb-0">
           ALEXANDRA
         </h1>
-        <h1 className="text-4xl md:text-5xl font-normal tracking-normal uppercase leading-tight mt-[-1.5rem]">
+        <h1 className="text-5xl md:text-5xl font-normal tracking-normal uppercase leading-tight mt-[-1.4rem]">
           BEKOU
         </h1>
       </div>

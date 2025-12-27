@@ -11,7 +11,7 @@ function App() {
   return (
     // <h1>Hello World</h1>
 
-    <div className="flex flex-col gap-0 bg-[#1e1e1e]">
+    <div className="flex flex-col gap-0 bg-[#0b010c]">
       <About />
       <Research />
       <TechStack />
