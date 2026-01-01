@@ -5,7 +5,7 @@ import Research from "./components/Research.jsx";
 import TechStack from "./components/TechStack.jsx";
 import LabSkills from "./components/LabSkills.jsx";
 import FunProjects from "./components/FunProjects.jsx";
-// import { Contact } from "./components/Contact.jsx";
+import Contact from "./components/Contact.jsx";
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
       <TechStack />
       <LabSkills />
       <FunProjects />
-      {/* <Contact />  */}
+      <Contact />
     </div>
   );
 }
