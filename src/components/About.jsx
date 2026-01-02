@@ -21,8 +21,8 @@ const About = () => {
         <h2 className="mt-4 text-lg md:text-3xl tracking-wide font-semibold self-end">
           <span>INTERDISCIPLINARY RESEARCHER</span>
         </h2>
-        <div className="border-l-2 border-purple-700 pb-1 self-center">
-          <h2 className="mt-2 pl-2 text-lg md:text-3xl text-purple-700/50 font-thin">
+        <div className="border-l-1 border-purple-700 pb-1 self-center">
+          <h2 className="mt-2 pl-2 text-lg md:text-3xl text-purple-700/80 font-thin">
             Next-gen Biologist
           </h2>
         </div>
