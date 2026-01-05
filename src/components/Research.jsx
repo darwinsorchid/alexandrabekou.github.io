@@ -24,7 +24,7 @@ const Research = () => {
             <span
               className={`${hoveredIndex === 0 ? "text-purple-700/80" : ""}`}
             >
-              Coevolution of agentic AI with NEAT
+              Host-Parasite Coevolution for Robust AI with NEAT
             </span>
           </h2>
 
@@ -40,9 +40,10 @@ const Research = () => {
               hoveredIndex === 0 ? "opacity-100" : "opacity-0"
             }`}
           >
-            Bio-inspired coevolutionary framework based on host-parasite
-            dynamics for the optimization of artificial neural networks using
-            NeuroEvolution of Augmenting Topologies
+            Designed and developed a bio-inspired cybersecurity framework based
+            on host-parasite coevolutionary dynamics using NeuroEvolution of
+            Augmenting Topologies (NEAT). Tested on MNIST, CIFAR10, PCOS
+            Diagnosis and synthetic Moon datasets.
           </p>
         </div>
 
@@ -55,7 +56,7 @@ const Research = () => {
             <span
               className={`${hoveredIndex === 1 ? "text-purple-700/80" : ""}`}
             >
-              Neuromesodermal Organoids from hiPSCs for the study of
+              Development of hiPSC Neuromesodermal Organoids for the study of
               Friedreich's Ataxia
             </span>
           </h2>
@@ -75,9 +76,9 @@ const Research = () => {
               hoveredIndex === 1 ? "opacity-100" : "opacity-0"
             }`}
           >
-            Bio-inspired coevolutionary framework based on host-parasite
-            dynamics for the optimization of artificial neural networks using
-            NeuroEvolution of Augmenting Topologies
+            Protocol standardization for culturing and screening
+            (immunocytochemistry) beating neuromesodermal hiPSC organoids as a
+            potential model for Friedreich's Ataxia.
           </p>
         </div>
 
@@ -98,16 +99,14 @@ const Research = () => {
               hoveredIndex === 2 ? "text-purple-600/80" : ""
             }`}
           >
-            Biohellenika S.A., R & D department
+            Biohellenika S.A., R&D department
           </h4>
           <p
             className={`text-lg font-light transition-opacity duration-400 ${
               hoveredIndex === 2 ? "opacity-100" : "opacity-0"
             }`}
           >
-            Bio-inspired coevolutionary framework based on host-parasite
-            dynamics for the optimization of artificial neural networks using
-            NeuroEvolution of Augmenting Topologies
+            ARPE-19 2D culture and amyloid-beta treatment for the study of AMD.
           </p>
         </div>
       </div>

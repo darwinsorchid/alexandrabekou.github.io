@@ -11,7 +11,7 @@ const LabSkillsDiagram = () => {
       {/* Lines */}
       <line
         x1="500"
-        y1="75"
+        y1="70"
         x2="500"
         y2="145"
         className="stroke-white stroke-1"
@@ -39,7 +39,7 @@ const LabSkillsDiagram = () => {
       />
       <line
         x1="350"
-        y1="180"
+        y1="175"
         x2="350"
         y2="270"
         className="stroke-white stroke-1"
@@ -47,7 +47,7 @@ const LabSkillsDiagram = () => {
       <line
         x1="365"
         y1="355"
-        x2="590"
+        x2="595"
         y2="355"
         className="stroke-white stroke-1"
       />
