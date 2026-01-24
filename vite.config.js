@@ -11,4 +11,20 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  optimizeDeps: {
+    include: [
+      "@tsparticles/react",
+      "@tsparticles/engine",
+      "@tsparticles/preset-big-circles",
+    ], // Pre-bundle tsParticles packages for faster loading and to avoid dynamic import issues
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          tsparticles: ["@tsparticles/react", "@tsparticles/engine"], // Separate chunk for tsParticles to prevent bundling conflicts
+        },
+      },
+    },
+  },
 });

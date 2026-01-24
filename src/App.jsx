@@ -8,17 +8,22 @@ import FunProjects from "./components/FunProjects.jsx";
 import Contact from "./components/Contact.jsx";
 import { useScroll } from "framer-motion";
 import { Pointer } from "@/components/ui/pointer";
+import ParticlesComponent from "./components/ParticleBackground.jsx";
 
 function App() {
   return (
-    <div className="flex flex-col gap-0 bg-[#0b010c]">
-      {/* <Pointer/> */}
-      <About />
-      <Research />
-      <TechStack />
-      <LabSkills />
-      <FunProjects />
-      <Contact />
+    <div className="relative min-h-screen z-0 overflow-hidden">
+      <ParticlesComponent />
+
+      <main className="relative z-10 flex flex-col">
+        {/* <Pointer/> */}
+        <About />
+        <Research />
+        <TechStack />
+        <LabSkills />
+        <FunProjects />
+        <Contact />
+      </main>
     </div>
   );
 }
