@@ -130,3 +130,7 @@ body,
     background-color: var(--background);
   }
 }
+
+* {
+  cursor: none !important;
+}
