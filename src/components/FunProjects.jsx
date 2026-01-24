@@ -3,11 +3,12 @@ import ProjectCard from "./ProjectCard.jsx";
 
 const projects = [
   {
-    title: "Photography Portfolio",
-    // description: "",
-    image: "src/assets/pics/IMG_5775.JPG",
-    link: "https://alexandrabekoy.wixsite.com/photography",
+    title: "Numpy NN vs Analytical Function",
+    // description: "My blog with research notes, tutorials, and experiments.",
+    image: "src/assets/pics/dec_bound.png",
+    link: "https://github.com/darwinsorchid/nn-from-scratch",
   },
+
   {
     title: "Mandelbrot Fractal App",
     // description: "A browser-based game built with React and canvas.",
@@ -19,6 +20,12 @@ const projects = [
     // description: "My blog with research notes, tutorials, and experiments.",
     image: "src/assets/pics/PPI.png",
     link: "src/assets/BioNet.html",
+  },
+  {
+    title: "Photography Portfolio",
+    // description: "",
+    image: "src/assets/pics/IMG_5775.JPG",
+    link: "https://alexandrabekoy.wixsite.com/photography",
   },
 ];
 
