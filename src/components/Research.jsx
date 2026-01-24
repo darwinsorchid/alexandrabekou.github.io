@@ -22,7 +22,9 @@ const Research = () => {
             onMouseLeave={() => setIsHoveredIndex(null)}
           >
             <span
-              className={`${hoveredIndex === 0 ? "text-purple-700/80" : ""}`}
+              className={`${
+                hoveredIndex === 0 ? "text-purple-700/80 cursor-pointer" : ""
+              }`}
             >
               Host-Parasite Coevolution for Robust AI with NEAT
             </span>
@@ -54,7 +56,9 @@ const Research = () => {
             onMouseLeave={() => setIsHoveredIndex(null)}
           >
             <span
-              className={`${hoveredIndex === 1 ? "text-purple-700/80" : ""}`}
+              className={`${
+                hoveredIndex === 1 ? "text-purple-700/80 cursor-pointer" : ""
+              }`}
             >
               Development of hiPSC Neuromesodermal Organoids for the study of
               Friedreich's Ataxia
@@ -78,7 +82,7 @@ const Research = () => {
           >
             Protocol standardization for culturing and screening
             (immunocytochemistry) beating neuromesodermal hiPSC organoids as a
-            potential model for Friedreich's Ataxia.
+            potential model for Friedreich's Ataxia. (SPECIALIZED)
           </p>
         </div>
 
@@ -89,7 +93,9 @@ const Research = () => {
             onMouseLeave={() => setIsHoveredIndex(null)}
           >
             <span
-              className={`${hoveredIndex === 2 ? "text-purple-700/80" : ""}`}
+              className={`${
+                hoveredIndex === 2 ? "text-purple-700/80 cursor-pointer" : ""
+              }`}
             >
               Age-Related Macular Degeneration Research
             </span>

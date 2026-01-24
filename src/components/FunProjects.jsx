@@ -1,4 +1,8 @@
 import React from "react";
+import { motion } from "framer-motion";
+
+// Create an array of projects
+const projects = [{}];
 
 const Fun = () => {
   return (

@@ -6,10 +6,13 @@ import TechStack from "./components/TechStack.jsx";
 import LabSkills from "./components/LabSkills.jsx";
 import FunProjects from "./components/FunProjects.jsx";
 import Contact from "./components/Contact.jsx";
+import { useScroll } from "framer-motion";
+import { Pointer } from "@/components/ui/pointer";
 
 function App() {
   return (
     <div className="flex flex-col gap-0 bg-[#0b010c]">
+      {/* <Pointer/> */}
       <About />
       <Research />
       <TechStack />
