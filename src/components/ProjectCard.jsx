@@ -6,20 +6,35 @@ const ProjectCard = ({ title, description, image, link }) => {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative block w-full h-64 rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-[1.02]"
+      className="group relative block w-full h-64 md:h-72 lg:h-80 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-[1.08]"
     >
-      {/* Background Image */}
-      <img
-        src={image}
-        alt={title}
-        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-      />
+      {/* Black background always visible */}
+      <div className="absolute inset-0" />
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/90 backdrop-blur-xs opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex flex-col justify-center items-center text-center p-4">
-        <h3 className="text-white text-xl font-normal mb-1">{title}</h3>
-        {/* <p className="text-gray-300 text-sm">{description}</p> */}
+      {/* Image fades in on hover */}
+      {image && (
+        <img
+          src={image}
+          alt={title}
+          className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        />
+      )}
+
+      {/* Title always visible on top */}
+      <div className="absolute inset-0 flex justify-center items-center">
+        <h3 className="text-white group-hover:opacity-0 text-sm md:text-2xl font-normal z-10">
+          {title}
+        </h3>
       </div>
+
+      {/* Optional description appears on hover */}
+      {description && (
+        <div className="absolute inset-0 flex flex-col justify-end items-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <p className="text-white text-xs md:text-base text-center">
+            {/* {description} */}
+          </p>
+        </div>
+      )}
     </a>
   );
 };

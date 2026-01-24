@@ -11,15 +11,15 @@ const projects = [
   {
     title: "Mandelbrot Fractal App",
     // description: "A browser-based game built with React and canvas.",
-    image: "src/assets/pics/mandelbrot_set_1.png",
+    image: "src/assets/pics/mandelbrot_set.png",
     link: "https://the-mandelbrot-fractal.streamlit.app/",
   },
-  // {
-  //   title: "Personal Blog",
-  //   description: "My blog with research notes, tutorials, and experiments.",
-  //   image: "/images/blog.png",
-  //   link: "https://yourblog.com",
-  // },
+  {
+    title: "PPI Network Report w/ Quarto, R",
+    // description: "My blog with research notes, tutorials, and experiments.",
+    image: "src/assets/pics/PPI.png",
+    link: "src/assets/BioNet.html",
+  },
 ];
 
 const Fun = () => {
