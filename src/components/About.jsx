@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./NavBar.jsx";
 import { HyperText } from "@/components/ui/hyper-text";
 import { MorphingText } from "@/components/ui/morphing-text";
+import { TextAnimate } from "@/components/ui/text-animate";
 
 const About = () => {
   return (
@@ -25,9 +26,12 @@ const About = () => {
             INTERDISCIPLINARY RESEARCHER
           </HyperText>
         </h2>
+
         <div className="border-l-1 border-purple-700 pb-1 self-center">
           <h2 className="mt-2 pl-2 text-lg md:text-3xl text-purple-700/80 font-thin">
-            Next-gen Biologist
+            <TextAnimate animation="blurInUp" by="character" once>
+              Next-gen Biologist
+            </TextAnimate>
           </h2>
         </div>
       </div>

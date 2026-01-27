@@ -25,7 +25,7 @@ interface HyperTextProps extends MotionProps {
 }
 
 const DEFAULT_CHARACTER_SET = Object.freeze(
-  "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("")
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(""),
 ) as readonly string[];
 
 const getRandomInt = (max: number): number => Math.floor(Math.random() * max);
@@ -34,7 +34,7 @@ export function HyperText({
   children,
   className,
   duration = 800,
-  delay = 0,
+  delay = 10,
   as: Component = "div",
   startOnView = false,
   animateOnHover = true,
@@ -46,7 +46,7 @@ export function HyperText({
   });
 
   const [displayText, setDisplayText] = useState<string[]>(() =>
-    children.split("")
+    children.split(""),
   );
   const [isAnimating, setIsAnimating] = useState(false);
   const iterationCount = useRef(0);
@@ -77,7 +77,7 @@ export function HyperText({
           observer.disconnect();
         }
       },
-      { threshold: 0.1, rootMargin: "-30% 0px -30% 0px" }
+      { threshold: 0.1, rootMargin: "-30% 0px -30% 0px" },
     );
 
     if (elementRef.current) {
@@ -106,9 +106,9 @@ export function HyperText({
           letter === " "
             ? letter
             : index <= iterationCount.current
-            ? children[index]
-            : characterSet[getRandomInt(characterSet.length)]
-        )
+              ? children[index]
+              : characterSet[getRandomInt(characterSet.length)],
+        ),
       );
 
       if (progress < 1) {

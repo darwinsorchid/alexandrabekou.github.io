@@ -1,5 +1,22 @@
 import React from "react";
 import TechStackNetwork from "./TechStackNetwork.jsx";
+import { IconCloud } from "@/components/ui/icon-cloud";
+
+const slugs = [
+  "python",
+  "r",
+  "visualstudiocode",
+  "git",
+  "github",
+  "pandas",
+  "numpy",
+  "scikitlearn",
+  "quarto",
+];
+
+const images = slugs.map(
+  (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`,
+);
 
 const TechStack = () => {
   return (
@@ -13,8 +30,10 @@ const TechStack = () => {
         </h1>
       </div>
 
-      <div className="flex flex-col self-end">
+      <div className="flex flex-col self-start">
         <TechStackNetwork />
+        {/* <IconCloud images={images} /> */}
+        {/* </span> */}
       </div>
     </section>
   );
