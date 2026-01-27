@@ -13,7 +13,7 @@ const projects = [
     title: "Mandelbrot Fractal App",
     // description: "A browser-based game built with React and canvas.",
     image: "src/assets/pics/mandelbrot_set.png",
-    link: "https://the-mandelbrot-fractal.streamlit.app/",
+    link: "https://github.com/darwinsorchid/The-Mandelbrot-Fractal",
   },
   {
     title: "PPI Network Report w/ Quarto, R",
@@ -26,6 +26,13 @@ const projects = [
     // description: "",
     image: "src/assets/pics/IMG_5775.JPG",
     link: "https://alexandrabekoy.wixsite.com/photography",
+  },
+
+  {
+    title: "Personal Website",
+    // description: "",
+    image: "src/assets/pics/website.png",
+    link: "https://github.com/darwinsorchid/alexandrabekou.github.io",
   },
 ];
 
