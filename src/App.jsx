@@ -10,22 +10,26 @@ import Contact from "./components/Contact.jsx";
 // import { Pointer } from "@/components/ui/pointer";
 import ParticlesComponent from "./components/ParticleBackground.jsx";
 import { SmoothCursor } from "@/components/ui/smooth-cursor";
+import LoadingScreen from "./components/LoadingPage.jsx";
 
 function App() {
   return (
-    <div className="relative min-h-screen z-0 overflow-hidden cursor-none">
-      <SmoothCursor />
-      <ParticlesComponent />
+    <div className="relative">
+      <LoadingScreen />
 
-      <main className="relative z-10 flex flex-col">
-        {/* <Pointer/> */}
-        <About />
-        <Research />
-        <TechStack />
-        <LabSkills />
-        <FunProjects />
-        <Contact />
-      </main>
+      <div className="relative min-h-screen z-0 overflow-hidden">
+        <SmoothCursor />
+        <ParticlesComponent />
+
+        <main className="relative z-10 flex flex-col">
+          <About />
+          <Research />
+          <TechStack />
+          <LabSkills />
+          <FunProjects />
+          <Contact />
+        </main>
+      </div>
     </div>
   );
 }
