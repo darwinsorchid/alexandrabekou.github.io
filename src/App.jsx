@@ -17,7 +17,7 @@ function App() {
     <div className="relative">
       <LoadingScreen />
 
-      <div className="relative min-h-screen z-0 overflow-hidden">
+      <div className="relative min-h-screen z-0 overflow-hidden cursor-none">
         <SmoothCursor />
         <ParticlesComponent />
 
