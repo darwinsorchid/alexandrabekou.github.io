@@ -15,12 +15,12 @@ export default function LoadingScreen() {
   if (loaded) return null;
 
   return (
-    <div className="fixed inset-0 bg-[#0e0617] flex items-center justify-center z-[9999] transition-opacity duration-500">
+    <div className="fixed inset-0 bg-[#0e0617] flex md:text-2xl items-center justify-center z-[9999] transition-opacity duration-500">
       {/* <img
         src="src/assets/logos/cv-logo.png"
         className="w-14 h-14 animate-pulse"
       /> */}
-      <h1 className="text-white font-2xl">[Loading ...]</h1>
+      <h1 className="text-white font-mono monospace">L o a d i n g ...</h1>
     </div>
   );
 }
