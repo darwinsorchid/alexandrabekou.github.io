@@ -1,7 +1,7 @@
 "use client";
 import { useEffect } from "react";
 
-const FollowCursor = ({ color = "#0924be" }) => {
+const FollowCursor = ({ color = "#000080" }) => {
   useEffect(() => {
     let canvas;
     let context;
@@ -37,7 +37,7 @@ const FollowCursor = ({ color = "#0924be" }) => {
         context.closePath();
       }
     }
-    const dot = new Dot(width / 2, height / 2, 8, 12);
+    const dot = new Dot(width / 2, height / 2, 9, 12);
     const onMouseMove = (e) => {
       cursor.x = e.clientX;
       cursor.y = e.clientY;

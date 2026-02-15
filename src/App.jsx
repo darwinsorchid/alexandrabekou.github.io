@@ -12,27 +12,30 @@ import ParticlesComponent from "./components/ParticleBackground.jsx";
 // import { SmoothCursor } from "@/components/ui/smooth-cursor";
 import LoadingScreen from "./components/LoadingPage.jsx";
 import FollowCursor from "./components/FollowCursor.jsx";
+import SmoothScroll from "./components/SmoothScroll.jsx";
 
 function App() {
   return (
-    <div className="relative">
-      <LoadingScreen />
+    <SmoothScroll>
+      <div className="relative">
+        <LoadingScreen />
 
-      <div className="relative min-h-screen z-0 overflow-hidden">
-        {/* <SmoothCursor /> */}
-        <FollowCursor />
-        <ParticlesComponent />
+        <div className="relative min-h-screen z-0 overflow-hidden">
+          {/* <SmoothCursor /> */}
+          <FollowCursor />
+          <ParticlesComponent />
 
-        <main className="relative z-10 flex flex-col">
-          <About />
-          <Research />
-          <TechStack />
-          <LabSkills />
-          <FunProjects />
-          <Contact />
-        </main>
+          <main className="relative z-10 flex flex-col snap-y snap-mandatory">
+            <About />
+            <Research />
+            <TechStack />
+            <LabSkills />
+            <FunProjects />
+            <Contact />
+          </main>
+        </div>
       </div>
-    </div>
+    </SmoothScroll>
   );
 }
 

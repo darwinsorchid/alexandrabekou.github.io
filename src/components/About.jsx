@@ -8,7 +8,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen flex flex-col text-white px-6 w-full md:px-16 lg:px-32 justify-center"
+      className="h-screen flex flex-col text-white px-6 w-full md:px-16 lg:px-32 justify-center"
     >
       <Navbar />
       <div className="max-w-4xl mr-auto flex flex-col">
