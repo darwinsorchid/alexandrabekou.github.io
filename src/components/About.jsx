@@ -12,7 +12,7 @@ const About = () => {
     >
       <Navbar />
       <div className="max-w-4xl mr-auto flex flex-col">
-        <h1 className="text-5xl md:text-5xl font-light tracking-normal uppercase leading-tight mb-0">
+        <h1 className="text-5xl md:text-5xl font-light tracking-normal uppercase leading-tight mt-20">
           ALEXANDRA BEKOU
         </h1>
         {/* <h1 className="text-5xl md:text-5xl font-normal tracking-normal uppercase leading-tight mt-[-1.4rem]">
@@ -20,7 +20,7 @@ const About = () => {
         </h1> */}
       </div>
 
-      <div className="mt-1 ml-130 pb-1 self-center">
+      <div className="mt-10 ml-130 pb-1 self-center">
         <h2 className="mt-4 text-lg md:text-3xl tracking-wide font-semibold self-end">
           <HyperText delay={800} characterSet="[IHAVEBEENWATCHING]">
             INTERDISCIPLINARY RESEARCHER
@@ -36,7 +36,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="w-full max-w-6xl mr-16 md:mr-24 flex flex-col pt-45 pl-20">
+      <div className="w-full max-w-6xl mr-16 md:mr-24 flex flex-col pt-35 pl-20">
         <h2 className="text-4xl font-small text-white mb-1">
           <span className="text-4xl">EXPERIMENTAL DESIGN </span>for:
         </h2>
