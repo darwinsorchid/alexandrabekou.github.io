@@ -57,13 +57,13 @@ const ParticlesComponent = (props) => {
       },
       particles: {
         color: {
-          value: "#FFFFFF",
+          value: "#ffffff",
         },
         links: {
           color: "#ffffff",
           distance: 250,
           enable: true,
-          opacity: 0.2,
+          opacity: 0.1,
           width: 0.5,
         },
         move: {
@@ -83,7 +83,7 @@ const ParticlesComponent = (props) => {
           value: 180,
         },
         opacity: {
-          value: 0.3,
+          value: 0.15,
         },
         shape: {
           type: "circle",

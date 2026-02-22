@@ -12,18 +12,18 @@ const Contact = () => {
         </h1>
       </div> */}
 
-      <div className="w-full flex justify-center items-center gap-x-20 pt-40 pb-40">
-        <a
+      <div className="w-full flex justify-center items-center gap-x-20 pt-100">
+        {/* <a
           href="src/assets/files/AlexandraBekoyCV.pdf"
           download="AlexandraBekoyCV.pdf"
         >
-          <img src="src/assets/logos/cv-logo.png" width="75" height="75"></img>
-        </a>
+          <img src="src/assets/logos/cv-logo.png" width="50" height="50"></img>
+        </a> */}
         <a href="https://github.com/darwinsorchid" target="_blank">
           <img
             src="src/assets/logos/github-mark-white.png"
-            width="75"
-            height="75"
+            width="50"
+            height="50"
           ></img>
         </a>
         <a
@@ -34,8 +34,8 @@ const Contact = () => {
         >
           <img
             src="src/assets/logos/email-envelope-line-white-icon.png"
-            width="75"
-            height="75"
+            width="50"
+            height="50"
           ></img>
         </a>
         <a
@@ -44,8 +44,8 @@ const Contact = () => {
         >
           <img
             src="src/assets/logos/linkedin-app-white-icon.png"
-            width="70"
-            height="70"
+            width="50"
+            height="50"
           ></img>
         </a>
       </div>
