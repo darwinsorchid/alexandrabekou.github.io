@@ -6,7 +6,7 @@ const ProjectCard = ({ title, description, image, link }) => {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative block w-full h-64 md:h-72 lg:h-80 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-[1.08]"
+      className="group relative block w-full h-64 md:h-72 lg:h-70 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-[1.08]"
     >
       {/* Black background always visible */}
       <div className="absolute inset-0" />
