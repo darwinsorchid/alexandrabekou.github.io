@@ -30,7 +30,7 @@ const About = () => {
         <div className="border-l-1 border-purple-700 pb-1 self-center">
           <h2 className="mt-2 pl-2 text-lg md:text-3xl text-purple-700/80 font-thin">
             <TextAnimate animation="blurInUp" by="character" once>
-              Next-gen Biologist
+              Next-generation of biological research
             </TextAnimate>
           </h2>
         </div>
@@ -38,7 +38,7 @@ const About = () => {
 
       <div className="w-full max-w-6xl mr-16 md:mr-24 flex flex-col pt-35 pl-20">
         <h2 className="text-4xl font-small text-white mb-1">
-          <span className="text-4xl">EXPERIMENTAL DESIGN </span>for:
+          <span className="text-4xl">EXPERIMENTAL DESIGN</span>:
         </h2>
         {/* <h3>
           <MorphingText texts={["Machine Learning", "Molecular Research"]} />
