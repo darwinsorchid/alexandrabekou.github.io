@@ -80,9 +80,9 @@ const Research = () => {
               hoveredIndex === 1 ? "opacity-100" : "opacity-0"
             }`}
           >
-            Protocol standardization for culturing and screening
-            (immunocytochemistry) beating neuromesodermal hiPSC organoids as a
-            potential model for Friedreich's Ataxia. (SPECIALIZED)
+            Protocol standardization for 3D culturing and ICC screening of
+            beating neuromesodermal hiPSC organoids as a potential model for
+            Friedreich's Ataxia.
           </p>
         </div>
 
