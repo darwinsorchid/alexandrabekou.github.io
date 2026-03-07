@@ -22,9 +22,9 @@ const TechStack = () => {
   return (
     <section
       id="techstack"
-      className="h-screen flex flex-col text-white px-6 md:px-16 w-full lg:px-32 gap-20"
+      className="h-screen flex flex-col text-white px-6 md:px-16 w-full lg:px-32 gap-20 mt-30"
     >
-      <div className="max-w-1xl mr-auto flex flex-col mb-[-5rem] pt-50 mt-10">
+      <div className="max-w-1xl mr-auto flex flex-col mb-[-5rem] pt-40 mt-10">
         <h1 className="md:text-5xl font-normal tracking-normal uppercase leading-tight mb-10">
           TECH STACK
         </h1>
