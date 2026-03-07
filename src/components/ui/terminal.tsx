@@ -234,9 +234,9 @@ export const Terminal = ({
     >
       <div className="border-border flex flex-col gap-y-2 border-b p-4">
         <div className="flex flex-row gap-x-2">
-          <div className="h-2 w-2 rounded-full bg-purple-900"></div>
-          <div className="h-2 w-2 rounded-full bg-purple-700"></div>
-          <div className="h-2 w-2 rounded-full bg-purple-500"></div>
+          <div className="h-2 w-2 rounded-full bg-gray-900"></div>
+          <div className="h-2 w-2 rounded-full bg-gray-700"></div>
+          <div className="h-2 w-2 rounded-full bg-gray-500"></div>
         </div>
       </div>
       <pre className="p-4">
