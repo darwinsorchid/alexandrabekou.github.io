@@ -14,8 +14,8 @@ const Research = () => {
         </h1>
       </div>
 
-      <div className="block border-l-6 border-gray-400/60">
-        <div className="ml-130 pb-1 self-end pb-20 pt-20">
+      <div className="block border-l-6 border-gray-500/60">
+        <div className="ml-60 pb-1 self-end pb-20 pt-20">
           <h2
             className="mt-4 text-lg md:text-3xl tracking-wide font-normal self-end"
             onMouseEnter={() => setIsHoveredIndex(0)}
@@ -49,7 +49,7 @@ const Research = () => {
           </p>
         </div>
 
-        <div className="ml-130 pb-1 self-end pb-20">
+        <div className="ml-60 pb-1 self-end pb-20">
           <h2
             className="mt-4 text-lg md:text-3xl tracking-wide font-normal self-end"
             onMouseEnter={() => setIsHoveredIndex(1)}
@@ -86,7 +86,7 @@ const Research = () => {
           </p>
         </div>
 
-        <div className="ml-130 pb-1 self-end pb-20">
+        <div className="ml-60 pb-1 self-end pb-20">
           <h2
             className="mt-4 text-lg md:text-3xl tracking-wide font-normal self-end"
             onMouseEnter={() => setIsHoveredIndex(2)}
