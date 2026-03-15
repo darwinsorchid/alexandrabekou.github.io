@@ -1,6 +1,18 @@
 import React, { useRef, useState, useEffect } from "react";
 
 const Contact = () => {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText("alexandra.bekoy@gmail.com");
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error("Failed to copy email:", err);
+    }
+  };
+
   return (
     <section
       id="contact"
@@ -26,18 +38,26 @@ const Contact = () => {
             height="50"
           ></img>
         </a>
-        <a
-          href="mailto:alexandra.bekoy@gmail.com"
-          onClick={() =>
-            navigator.clipboard.writeText("alexandra.bekoy@gmail.com")
-          }
-        >
-          <img
-            src="src/assets/logos/email-envelope-line-white-icon.png"
-            width="50"
-            height="50"
-          ></img>
-        </a>
+
+        <div className="relative inline-block group">
+          <div className="absolute -top-12 left-1/2 -translate-x-1/2 bg-black/90 text-white text-xs px-3 py-1.5 rounded-full whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none shadow-lg">
+            {copied ? "Copied!" : "Copy email"}
+          </div>
+
+          <button
+            onClick={handleCopyEmail}
+            className="p-1.5 hover:scale-110 transition-all duration-200 focus:outline-none bg-transparent border-none"
+            aria-label="Copy email: alexandra.bekoy@gmail.com"
+          >
+            <img
+              src="src/assets/logos/email-envelope-line-white-icon.png"
+              width="50"
+              height="50"
+              alt="Copy email"
+            />
+          </button>
+        </div>
+
         <a
           href="https://www.linkedin.com/in/alexandra-bekou-379356227/"
           target="_blank"
