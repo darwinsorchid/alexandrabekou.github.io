@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 const navItems = [
   { name: "ABOUT", href: "#about" },
@@ -14,27 +14,45 @@ const Navbar = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
+  const scrollToSection = (e, href) => {
+    // Stop ALL default behavior
+    e.preventDefault();
+    e.stopPropagation();
+
+    // Remove hash from URL first
+    window.history.replaceState(null, null, window.location.pathname);
+
+    // Then scroll
+    const target = document.querySelector(href);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      setIsScrolled(currentScrollY > 10);
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY;
+          setIsScrolled(currentScrollY > 10);
 
-      // Hide navbar when scrolling down, show when scrolling up
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        setIsVisible(false);
-      } else {
-        setIsVisible(true);
+          if (currentScrollY > lastScrollY && currentScrollY > 100) {
+            setIsVisible(false);
+          } else {
+            setIsVisible(true);
+          }
+
+          setLastScrollY(currentScrollY);
+          ticking = false;
+        });
+        ticking = true;
       }
-
-      setLastScrollY(currentScrollY);
     };
 
-    window.addEventListener("scroll", handleScroll);
-
-    // Cleanup to prevent memory leaks
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
   return (
@@ -49,8 +67,9 @@ const Navbar = () => {
             {navItems.map((item, index) => (
               <a
                 key={index}
-                href={item.href}
-                className="text-foreground/80 hover:text-purple-700/80 transition-colors duration-300"
+                href="#"
+                onClick={(e) => scrollToSection(e, item.href)}
+                className="text-foreground/80 hover:text-purple-700/80 transition-colors duration-300 block"
               >
                 {item.name}
               </a>
