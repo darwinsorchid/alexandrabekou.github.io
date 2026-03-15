@@ -37,16 +37,34 @@ const Research = () => {
           >
             ATHENA R.C. / I.S.I
           </h4>
-          <p
-            className={`text-lg font-light transition-opacity duration-400 ${
+          <div
+            className={`transition-opacity duration-400 ${
               hoveredIndex === 0 ? "opacity-100" : "opacity-0"
             }`}
           >
-            Designed and developed a bio-inspired cybersecurity framework based
-            on host-parasite coevolutionary dynamics using NeuroEvolution of
-            Augmenting Topologies (NEAT). Tested on MNIST, CIFAR10, PCOS
-            Diagnosis and synthetic Moon datasets.
-          </p>
+            <p className="text-lg font-light leading-relaxed text-gray-300 mb-3">
+              Developed <span className="text-purple-400">CoEvoNEAT</span>, a{" "}
+              <span className="text-white">
+                bio-inspired cybersecurity framework
+              </span>{" "}
+              based on host-parasite coevolution using NeuroEvolution of
+              Augmenting Topologies (NEAT) .
+            </p>
+
+            <ul className="text-gray-300 space-y-1 text-md leading-relaxed list-disc list-inside">
+              <li>
+                Models adversarial coevolution between defensive and attacking
+                networks
+              </li>
+              <li>
+                Alternative approach to adversarial learning for binary
+                label-flipping attacks
+              </li>
+              <li>
+                Evaluated on: MNIST • CIFAR-10 • PCOS Diagnosis • Synthetic Moon
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div className="ml-60 pb-1 self-end pb-20">
