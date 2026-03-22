@@ -2,6 +2,7 @@ import React from "react";
 import ProjectCard from "./ProjectCard.jsx";
 import DecBound from "@/assets/pics/dec_bound.png";
 import MandelBrot from "@/assets/pics/mandelbrot_set.png";
+import PPI from "@/assets/pics/bioPPI.png";
 import Pic from "@/assets/pics/IMG_5775.JPG";
 import Site from "@/assets/pics/website.png";
 
@@ -9,33 +10,33 @@ const projects = [
   {
     title: "Numpy NN vs Analytical Function",
     // description: "My blog with research notes, tutorials, and experiments.",
-    image: DecBound,
+    image: (src = { DecBound }),
     link: "https://github.com/darwinsorchid/nn-from-scratch",
   },
 
   {
     title: "Mandelbrot Fractal App",
     // description: "A browser-based game built with React and canvas.",
-    image: MandelBrot,
+    image: (src = { MandelBrot }),
     link: "https://github.com/darwinsorchid/The-Mandelbrot-Fractal",
   },
   {
     title: "PPI Network Report w/ Quarto, R",
     // description: "My blog with research notes, tutorials, and experiments.",
-    image: "src/assets/pics/PPI.png",
+    image: (src = { PPI }),
     link: "src/assets/BioNet.html",
   },
   {
     title: "Photography Portfolio",
     // description: "",
-    image: Pic,
+    image: (src = { Pic }),
     link: "https://alexandrabekoy.wixsite.com/photography",
   },
 
   {
     title: "Personal Website",
     // description: "",
-    image: Site,
+    image: (src = { Site }),
     link: "https://github.com/darwinsorchid/alexandrabekou.github.io",
   },
 ];
