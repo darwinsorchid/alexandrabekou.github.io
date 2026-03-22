@@ -35,7 +35,7 @@ const projects = [
   {
     title: "Personal Website",
     // description: "",
-    image: "src/assets/pics/website.png",
+    image: Site,
     link: "https://github.com/darwinsorchid/alexandrabekou.github.io",
   },
 ];
