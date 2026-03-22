@@ -48,7 +48,9 @@ const About = () => {
           <li className="list-disc list-inside">
             Bio-inspired Neural Networks
           </li>
-          <li className="list-disc list-inside">Neuroevolution</li>
+          <li className="list-disc list-inside">
+            Neuroevolution and Natural Computing
+          </li>
           <li className="list-disc list-inside">Computational Biology</li>
           <li className="list-disc list-inside">
             Organoids and Disease Modeling
