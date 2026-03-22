@@ -24,7 +24,7 @@ const projects = [
     title: "PPI Network Report w/ Quarto, R",
     // description: "My blog with research notes, tutorials, and experiments.",
     image: (src = { PPI }),
-    link: "src/assets/BioNet.html",
+    link: "/BioNet.html",
   },
   {
     title: "Photography Portfolio",
