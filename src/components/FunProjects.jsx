@@ -10,33 +10,33 @@ const projects = [
   {
     title: "Numpy NN vs Analytical Function",
     // description: "My blog with research notes, tutorials, and experiments.",
-    image: (src = { DecBound }),
+    image: DecBound,
     link: "https://github.com/darwinsorchid/nn-from-scratch",
   },
 
   {
     title: "Mandelbrot Fractal App",
     // description: "A browser-based game built with React and canvas.",
-    image: (src = { MandelBrot }),
+    image: MandelBrot,
     link: "https://github.com/darwinsorchid/The-Mandelbrot-Fractal",
   },
   {
     title: "PPI Network Report w/ Quarto, R",
     // description: "My blog with research notes, tutorials, and experiments.",
-    image: (src = { PPI }),
+    image: PPI,
     link: "/BioNet.html",
   },
   {
     title: "Photography Portfolio",
     // description: "",
-    image: (src = { Pic }),
+    image: Pic,
     link: "https://alexandrabekoy.wixsite.com/photography",
   },
 
   {
     title: "Personal Website",
     // description: "",
-    image: (src = { Site }),
+    image: Site,
     link: "https://github.com/darwinsorchid/alexandrabekou.github.io",
   },
 ];
