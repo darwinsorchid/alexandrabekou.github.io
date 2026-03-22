@@ -1,18 +1,22 @@
 import React from "react";
 import ProjectCard from "./ProjectCard.jsx";
+import DecBound from "@/assets/pics/dec_bound.png";
+import MandelBrot from "@/assets/pics/mandelbrot_set.png";
+import Pic from "@/assets/pics/IMG_5775.JPG";
+import Site from "@/assets/pics/website.png";
 
 const projects = [
   {
     title: "Numpy NN vs Analytical Function",
     // description: "My blog with research notes, tutorials, and experiments.",
-    image: "src/assets/pics/dec_bound.png",
+    image: DecBound,
     link: "https://github.com/darwinsorchid/nn-from-scratch",
   },
 
   {
     title: "Mandelbrot Fractal App",
     // description: "A browser-based game built with React and canvas.",
-    image: "src/assets/pics/mandelbrot_set.png",
+    image: MandelBrot,
     link: "https://github.com/darwinsorchid/The-Mandelbrot-Fractal",
   },
   {
@@ -24,7 +28,7 @@ const projects = [
   {
     title: "Photography Portfolio",
     // description: "",
-    image: "src/assets/pics/IMG_5775.JPG",
+    image: Pic,
     link: "https://alexandrabekoy.wixsite.com/photography",
   },
 
