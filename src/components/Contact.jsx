@@ -1,4 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
+import githubLogo from "../assets/logos/github-mark-white.png";
+import emailLogo from "../assets/logos/email-envelope-line-white-icon.png";
+import linkedinLogo from "../assets/logos/linkedin-app-white-icon.png";
 
 const Contact = () => {
   const [copied, setCopied] = useState(false);
@@ -32,11 +35,7 @@ const Contact = () => {
           <img src="src/assets/logos/cv-logo.png" width="50" height="50"></img>
         </a> */}
         <a href="https://github.com/darwinsorchid" target="_blank">
-          <img
-            src="src/assets/logos/github-mark-white.png"
-            width="50"
-            height="50"
-          ></img>
+          <img src={githubLogo} width="50" height="50"></img>
         </a>
 
         <div className="relative inline-block group">
@@ -49,12 +48,7 @@ const Contact = () => {
             className="p-1.5 hover:scale-110 transition-all duration-200 focus:outline-none bg-transparent border-none"
             aria-label="Copy email: alexandra.bekoy@gmail.com"
           >
-            <img
-              src="src/assets/logos/email-envelope-line-white-icon.png"
-              width="50"
-              height="50"
-              alt="Copy email"
-            />
+            <img src={emailLogo} width="50" height="50" alt="Copy email" />
           </button>
         </div>
 
@@ -62,11 +56,7 @@ const Contact = () => {
           href="https://www.linkedin.com/in/alexandra-bekou-379356227/"
           target="_blank"
         >
-          <img
-            src="src/assets/logos/linkedin-app-white-icon.png"
-            width="50"
-            height="50"
-          ></img>
+          <img src={linkedinLogo} width="50" height="50"></img>
         </a>
       </div>
     </section>

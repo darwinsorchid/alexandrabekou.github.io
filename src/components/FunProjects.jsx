@@ -1,10 +1,10 @@
 import React from "react";
 import ProjectCard from "./ProjectCard.jsx";
-import DecBound from "@/assets/pics/dec_bound.png";
-import MandelBrot from "@/assets/pics/mandelbrot_set.png";
-import PPI from "@/assets/pics/bioPPI.png";
-import Pic from "@/assets/pics/IMG_5775.JPG";
-import Site from "@/assets/pics/website.png";
+import DecBound from "../assets/pics/dec_bound.png";
+import MandelBrot from "../assets/pics/mandelbrot_set.png";
+import PPI from "../assets/pics/bioPPI.png";
+import Pic from "../assets/pics/IMG_5775.jpg";
+import Site from "../assets/pics/website.png";
 
 const projects = [
   {
@@ -24,7 +24,7 @@ const projects = [
     title: "PPI Network Report w/ Quarto, R",
     // description: "My blog with research notes, tutorials, and experiments.",
     image: PPI,
-    link: "/BioNet.html",
+    link: "/alexandrabekou.github.io/BioNet.html",
   },
   {
     title: "Photography Portfolio",
