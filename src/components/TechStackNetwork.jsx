@@ -24,6 +24,14 @@ const TechStackNetwork = () => {
         <AnimatedSpan>✔ scikit-learn </AnimatedSpan>
         <AnimatedSpan> </AnimatedSpan>
 
+        <TypingAnimation delay={3200} className="text-green-600">
+          $ cd backend_dev
+        </TypingAnimation>
+        <AnimatedSpan>✔ fastapi </AnimatedSpan>
+        <AnimatedSpan>✔ redis </AnimatedSpan>
+        <AnimatedSpan>✔ rq </AnimatedSpan>
+        <AnimatedSpan>✔ docker </AnimatedSpan>
+
         <TypingAnimation delay={2400} className="text-green-600">
           $ cd bioinformatics
         </TypingAnimation>
@@ -34,7 +42,7 @@ const TechStackNetwork = () => {
         <AnimatedSpan> </AnimatedSpan>
 
         <TypingAnimation delay={3200} className="text-green-600">
-          $ cd web_development
+          $ cd front-end-dev
         </TypingAnimation>
         <AnimatedSpan>✔ react </AnimatedSpan>
         <AnimatedSpan>✔ nodejs </AnimatedSpan>
