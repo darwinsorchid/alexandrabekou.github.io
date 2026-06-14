@@ -4,23 +4,18 @@ export default function LoadingScreen() {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    // When window fully loads, hide the loading screen
-    const handleLoad = () => setLoaded(true);
-    window.addEventListener("load", handleLoad);
+    const timer = setTimeout(() => {
+      setLoaded(true);
+    }, 1000); // show for 1 second
 
-    return () => window.removeEventListener("load", handleLoad);
+    return () => clearTimeout(timer);
   }, []);
 
-  // Don't render if loaded
   if (loaded) return null;
 
   return (
-    <div className="fixed inset-0 bg-['#1f0636e3'] flex md:text-2xl items-center justify-center z-[9999] transition-opacity duration-500">
-      {/* <img
-        src="src/assets/logos/cv-logo.png"
-        className="w-14 h-14 animate-pulse"
-      /> */}
-      <h1 className="text-white font-mono monospace">L o a d i n g ...</h1>
+    <div className="fixed inset-0 bg-[#0d061ce5] flex md:text-2xl items-center justify-center z-[9999]">
+      <h1 className="text-white font-mono">L o a d i n g ...</h1>
     </div>
   );
 }
