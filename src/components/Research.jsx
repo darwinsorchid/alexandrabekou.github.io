@@ -37,7 +37,9 @@ const Research = () => {
                   hoveredIndex === 0 ? "text-purple-700/80 cursor-pointer" : ""
                 }`}
               >
-                Host-Parasite Coevolution for Robust AI with NEAT
+                <a href="https://coevolution-project.eu/" target="_blank">
+                  Host-Parasite Coevolution for Robust AI with NEAT
+                </a>
               </span>
             </h2>
 
@@ -54,12 +56,14 @@ const Research = () => {
               }`}
             >
               <p className="text-lg font-light leading-relaxed text-gray-300 mb-3">
-                Developed <span className="text-purple-400">CoEvoNEAT</span>, a{" "}
+                Built <span className="text-purple-400">CoEvoNEAT</span>, a{" "}
                 <span className="text-white">
                   bio-inspired cybersecurity framework
                 </span>{" "}
                 based on host-parasite coevolution using NeuroEvolution of
-                Augmenting Topologies (NEAT) .
+                Augmenting Topologies (NEAT) . Developed as part of the{" "}
+                <span className="text-blue-400">EU-funded CoEvolution </span>
+                project.
               </p>
 
               <ul className="text-gray-300 space-y-1 text-md leading-relaxed list-disc list-inside">
@@ -102,8 +106,10 @@ const Research = () => {
                   hoveredIndex === 1 ? "text-purple-700/80 cursor-pointer" : ""
                 }`}
               >
-                Development of hiPSC Neuromesodermal Organoids for the study of
-                Friedreich's Ataxia
+                <a href="https://kosbio.com/" target="_blank">
+                  Development of hiPSC Neuromesodermal Organoids for the study
+                  of Friedreich's Ataxia
+                </a>
               </span>
             </h2>
 

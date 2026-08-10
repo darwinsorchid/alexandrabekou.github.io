@@ -3,8 +3,8 @@ import ProjectCard from "./ProjectCard.jsx";
 import DecBound from "../assets/pics/dec_bound.png";
 import MandelBrot from "../assets/pics/mandelbrot_set.png";
 import PPI from "../assets/pics/bioPPI.png";
-import Pic from "../assets/pics/IMG_5775.jpg";
-import Site from "../assets/pics/website.png";
+import Pic from "../assets/pics/IMG_5775.JPG";
+import Logo from "../assets/pics/icon.png";
 
 const projects = [
   {
@@ -21,7 +21,7 @@ const projects = [
     link: "https://github.com/darwinsorchid/The-Mandelbrot-Fractal",
   },
   {
-    title: "PPI Network Report w/ Quarto, R",
+    title: "PPI Network Analysis",
     // description: "My blog with research notes, tutorials, and experiments.",
     image: PPI,
     link: "/BioNet.html",
@@ -36,7 +36,7 @@ const projects = [
   {
     title: "Personal Website",
     // description: "",
-    image: Site,
+    image: Logo,
     link: "https://github.com/darwinsorchid/alexandrabekou.github.io",
   },
 ];

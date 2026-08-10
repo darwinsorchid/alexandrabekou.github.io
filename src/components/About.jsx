@@ -27,7 +27,7 @@ const About = () => {
             </HyperText>
           </h2>
 
-          <div className="border-l border-purple-700 pb-1 self-center pr-5">
+          <div className="border-l border-purple-700 pb-1 self-center pr-9">
             <h2 className="mt-2 text-lg md:text-3xl text-purple-700/80 font-thin">
               <TextAnimate animation="blurInUp" by="character" once>
                 Biological Systems and Artificial Intelligence
@@ -46,12 +46,14 @@ const About = () => {
         </h3> */}
         <ul className="mt-2 space-y-1 text-xl font-light">
           <li className="list-disc list-inside">
-            Bio-inspired Neural Networks
+            Computational Biology & Bioinformatics
           </li>
           <li className="list-disc list-inside">
             Neuroevolution and Natural Computing
           </li>
-          <li className="list-disc list-inside">Computational Biology</li>
+          <li className="list-disc list-inside">
+            Bio-inspired Neural Networks
+          </li>
           <li className="list-disc list-inside">
             Organoids and Disease Modeling
           </li>
