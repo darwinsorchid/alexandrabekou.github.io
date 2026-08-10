@@ -103,7 +103,8 @@ The goal is to communicate both scientific depth and technical creativity throug
 ### Requirements
 
 ```
-Node.js
+react
+node.js
 npm
 ```
 
