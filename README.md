@@ -1,31 +1,128 @@
+# Personal Website / Research Portfolio
+
+> Bioinformatics • Computational Biology • AI Interdisciplinary Research • Organoid Disease Modeling
+
+A modern, interactive personal website designed to showcase my work as an interdisciplinary researcher, combining bioinformatics, bio-inspired cybersecurity and biomedical wet-lab research experience.
+
+This website is designed as a minimal one-page user experience with subtle motion, interactive visual elements, and a dark aesthetic.
+
+---
+
+## Overview
+
+This portfolio serves as a central place to present:
+
+- Research interests
+- Technical projects and research experience
+- Computational and laboratory skills
+- Fun side-quests
+
+The goal is to communicate both scientific depth and technical creativity through a clean and accessible interface.
+
+<br>
+
 ![alt text](image.png)
 
-## Description
+<br>
 
-Minimal UI/UX design personal website built with _React_ & _Vite_ for a bioinformatics / interdisciplinary researcher portfolio.
+### UI Design Principles
 
-#### UI/UX Design
+- Minimal
+- Futuristic
+- Content-first
+- Accessible typography and contrast
+- Purposeful motion
 
-- `one-page scroll`
-- `smooth scrolling`
+<br>
 
-#### Sections
-
-1. About
-2. Research Projects
-3. Tech Stack
-4. Lab Skills
-5. Fun Projects
-6. Contact Information
-
-### Credits
-
-- Interactive particle background: [particles.js](https://github.com/vincentgarreau/particles.js/)
-
-### Color Palette
+### Visual Identity
 
 | Color      | Hex     |
 | ---------- | ------- |
 | Background | #0b010c |
 | Accent #1  | #7e22ce |
 | Accent #2  | #16A34A |
+
+<br>
+
+### UX Design
+
+- `one-page scroll`
+- `smooth scrolling`
+- `magic ui hyper-text`
+- `magic ui terminal`
+- [`particles.js`](https://vincentgarreau.com/particles.js/)
+
+<br>
+
+---
+
+## Website Structure
+
+```
+┌───────────────────────────────────────┐
+│                 ABOUT                 │
+│        Name · Research · Identity     │
+└───────────────────────────────────────┘
+                    │
+                    ▼
+┌───────────────────────────────────────┐
+│          RESEARCH PROJECTS            │
+│         Technical Experience          │
+└───────────────────────────────────────┘
+                    │
+                    ▼
+┌───────────────────────────────────────┐
+│              TECH STACK               │
+│         Computational Skills          │
+└───────────────────────────────────────┘
+                    │
+                    ▼
+┌───────────────────────────────────────┐
+│               LAB SKILLS              │
+│     Biomedical Wet-Lab Techniques     │
+└───────────────────────────────────────┘
+                    │
+                    ▼
+┌───────────────────────────────────────┐
+│             FUN PROJECTS              │
+│        Creative Technical Work        │
+└───────────────────────────────────────┘
+                    │
+                    ▼
+┌───────────────────────────────────────┐
+│                CONTACT                │
+│        GitHub · Email · LinkedIN      │
+└───────────────────────────────────────┘
+```
+
+---
+
+## Getting Started
+
+### Requirements
+
+```
+Node.js
+npm
+```
+
+### Installation
+
+```bash
+git clone
+cd <project-directory>
+npm install
+```
+
+### Development
+
+```bash
+npm run dev
+```
+
+### Production Build
+
+```bash
+npm run build
+```
