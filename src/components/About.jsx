@@ -13,22 +13,22 @@ const About = () => {
       <Navbar />
 
       {/* Align name with title */}
-      <div className="flex w-full items-start justify-between mt-20">
+      <div className="flex w-full items-start justify-between mt-20 md:mt-20">
         <div>
           <h1 className="text-white text-5xl md:text-5xl tracking-normal uppercase leading-tight">
             ALEXANDRA BEKOU
           </h1>
         </div>
 
-        <div className="text-right mt-20">
+        <div className="hidden md:block text-right mt-20 md:mt-20">
           <h2 className="text-lg md:text-2xl tracking-wide font-semibold self-end">
             <HyperText delay={800} characterSet="[IHAVEBEENWATCHING]">
               INTERDISCIPLINARY RESEARCHER
             </HyperText>
           </h2>
 
-          <div className="border-l border-purple-700 pb-1 self-center pr-9">
-            <h2 className="mt-2 text-lg md:text-3xl text-purple-700/80 font-thin">
+          <div className="border-l border-purple-700 pb-1 self-center pr-9 md:pr-9">
+            <h2 className="mt-2 text-lg md:text-3xl text-purple-700/80 font-thin md:block">
               <TextAnimate animation="blurInUp" by="character" once>
                 Biological Systems and Artificial Intelligence
               </TextAnimate>
@@ -37,14 +37,22 @@ const About = () => {
         </div>
       </div>
 
-      <div className="w-full max-w-4xl mr-16 md:mr-24 flex flex-col pt-25 pl-20">
-        <h2 className="text-4xl font-small text-white mb-1">
-          <span className="text-3xl">RESEARCH INTERESTS</span>:
+      <div className="md:hidden mt-10 flex flex-col items-center text-center gap-6">
+        <h2 className="text-base font-semibold tracking-wide uppercase text-purple-500/90">
+          <HyperText delay={800} characterSet="[IHAVEBEENWATCHING]">
+            INTERDISCIPLINARY RESEARCHER
+          </HyperText>
+        </h2>
+      </div>
+
+      <div className="w-full max-w-4xl mr-8 md:mr-24 flex flex-col pt-12 pl-6 md:pt-12 md:pl-20">
+        <h2 className="text-4xl font-small text-white mb-1 md:text-4xl md:font-small">
+          <span className="text-lg md:text-3xl">RESEARCH INTERESTS</span>:
         </h2>
         {/* <h3>
           <MorphingText texts={["Machine Learning", "Molecular Research"]} />
         </h3> */}
-        <ul className="mt-2 space-y-1 text-xl font-light">
+        <ul className="mt-2 space-y-1 text-base font-light md:text-xl">
           <li className="list-disc list-inside">
             Computational Biology & Bioinformatics
           </li>

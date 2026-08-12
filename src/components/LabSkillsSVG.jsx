@@ -63,8 +63,8 @@ const LabSkillsDiagram = () => {
       <text
         x="450"
         y="60"
-        className="fill-white text-2xl font-light hover:fill-purple-700 
-                  transform transition-all hover:scale-105 duration-400 cursor-pointer"
+        className="fill-white text-2xl font-light hover:fill-purple-700 active:fill-purple-700 focus:fill-purple-700
+                  transform transition-all hover:scale-105 active:scale-105 focus:scale-105 duration-400 cursor-pointer"
         style={{ transformOrigin: "center" }}
       >
         Confocal Microscopy
@@ -72,8 +72,8 @@ const LabSkillsDiagram = () => {
       <text
         x="200"
         y="165"
-        className="fill-white text-2xl font-light hover:fill-purple-700 
-                  transform transition-all hover:scale-105 duration-400 cursor-pointer"
+        className="fill-white text-2xl font-light hover:fill-purple-700 active:fill-purple-700 focus:fill-purple-700
+                  transform transition-all hover:scale-105 active:scale-105 focus:scale-105 duration-400 cursor-pointer"
         style={{ transformOrigin: "center" }}
       >
         Organoid culture
@@ -81,8 +81,8 @@ const LabSkillsDiagram = () => {
       <text
         x="470"
         y="165"
-        className="fill-white text-2xl font-light hover:fill-purple-700 
-                  transform transition-all hover:scale-105 duration-400 cursor-pointer"
+        className="fill-white text-2xl font-light hover:fill-purple-700 active:fill-purple-700 focus:fill-purple-700
+                  transform transition-all hover:scale-105 active:scale-105 focus:scale-105 duration-400 cursor-pointer"
         style={{ transformOrigin: "center" }}
       >
         Immunocytochemistry
@@ -90,8 +90,8 @@ const LabSkillsDiagram = () => {
       <text
         x="165"
         y="260"
-        className="fill-white text-2xl font-light hover:fill-purple-700 
-                  transform transition-all hover:scale-105 duration-400 cursor-pointer"
+        className="fill-white text-2xl font-light hover:fill-purple-700 active:fill-purple-700 focus:fill-purple-700
+                  transform transition-all hover:scale-105 active:scale-105 focus:scale-105 duration-400 cursor-pointer"
         style={{ transformOrigin: "center" }}
       >
         q-PCR
@@ -99,8 +99,8 @@ const LabSkillsDiagram = () => {
       <text
         x="450"
         y="220"
-        className="fill-white text-2xl font-light hover:fill-purple-700 
-                  transform transition-all hover:scale-105 duration-400 cursor-pointer"
+        className="fill-white text-2xl font-light hover:fill-purple-700 active:fill-purple-700 focus:fill-purple-700
+                  transform transition-all hover:scale-105 active:scale-105 focus:scale-105 duration-400 cursor-pointer"
         style={{ transformOrigin: "center" }}
       >
         CRISPR-Cas9
@@ -108,8 +108,8 @@ const LabSkillsDiagram = () => {
       <text
         x="340"
         y="300"
-        className="fill-white text-2xl font-light hover:fill-purple-700 
-                  transform transition-all hover:scale-105 duration-400 cursor-pointer"
+        className="fill-white text-2xl font-light hover:fill-purple-700 active:fill-purple-700 focus:fill-purple-700
+                  transform transition-all hover:scale-105 active:scale-105 focus:scale-105 duration-400 cursor-pointer"
         style={{ transformOrigin: "center" }}
       >
         2D hiPSCs culture
@@ -117,8 +117,8 @@ const LabSkillsDiagram = () => {
       <text
         x="160"
         y="360"
-        className="fill-white text-2xl font-light hover:fill-purple-700 
-                  transform transition-all hover:scale-105 duration-400 cursor-pointer"
+        className="fill-white text-2xl font-light hover:fill-purple-700 active:fill-purple-700 focus:fill-purple-700
+                  transform transition-all hover:scale-105 active:scale-105 focus:scale-105 duration-400 cursor-pointer"
         style={{ transformOrigin: "center" }}
       >
         ARPE-19 cell culture
@@ -126,8 +126,8 @@ const LabSkillsDiagram = () => {
       <text
         x="600"
         y="360"
-        className="fill-white text-2xl font-light hover:fill-purple-700 
-                  transform transition-all hover:scale-105 duration-400 cursor-pointer"
+        className="fill-white text-2xl font-light hover:fill-purple-700 active:fill-purple-700 focus:fill-purple-700
+                  transform transition-all hover:scale-105 active:scale-105 focus:scale-105 duration-400 cursor-pointer"
         style={{ transformOrigin: "center" }}
       >
         ELISA

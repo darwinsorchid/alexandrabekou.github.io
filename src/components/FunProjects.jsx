@@ -45,14 +45,14 @@ const Fun = () => {
   return (
     <section
       id="fun"
-      className="h-screen flex flex-col text-white px-6 w-full md:px-16 lg:px-32 mt-20"
+      className="min-h-screen flex flex-col text-white px-6 w-full md:px-16 lg:px-32 mt-10 md:mt-20 pb-16 md:pb-0"
     >
       <div className="max-w-1xl mr-auto flex flex-col">
-        <h1 className="md:text-5xl font-normal tracking-normal uppercase leading-tight mb-5 pt-10 self-end pb-8">
+        <h1 className="text-3xl font-bold tracking-normal uppercase leading-tight md:text-5xl md:font-normal mb-3 md:mb-5 pt-6 md:pt-10 self-end pb-4 md:pb-8">
           FUN
         </h1>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 pb-8">
         {projects.map((project) => (
           <ProjectCard key={project.title} {...project} />
         ))}

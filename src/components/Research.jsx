@@ -1,22 +1,76 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Research = () => {
   const [hoveredIndex, setIsHoveredIndex] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
+  const itemRefs = useRef([]);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 767px)");
+
+    const updateDeviceType = () => setIsMobile(mediaQuery.matches);
+    updateDeviceType();
+
+    mediaQuery.addEventListener("change", updateDeviceType);
+    return () => mediaQuery.removeEventListener("change", updateDeviceType);
+  }, []);
+
+  useEffect(() => {
+    if (!isMobile) return;
+
+    const updateActiveResearchItem = () => {
+      const viewportCenter = window.innerHeight * 0.45;
+      let closestIndex = 0;
+      let closestDistance = Number.POSITIVE_INFINITY;
+
+      itemRefs.current.forEach((node, index) => {
+        if (!node) return;
+
+        const rect = node.getBoundingClientRect();
+        const cardCenter = rect.top + rect.height / 2;
+        const distance = Math.abs(cardCenter - viewportCenter);
+
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestIndex = index;
+        }
+      });
+
+      setIsHoveredIndex(closestIndex);
+    };
+
+    updateActiveResearchItem();
+    window.addEventListener("scroll", updateActiveResearchItem, {
+      passive: true,
+    });
+    window.addEventListener("resize", updateActiveResearchItem);
+
+    return () => {
+      window.removeEventListener("scroll", updateActiveResearchItem);
+      window.removeEventListener("resize", updateActiveResearchItem);
+    };
+  }, [isMobile]);
 
   return (
     <section
       id="research"
-      className="h-screen flex flex-col text-white px-6 w-full md:px-16 lg:px-32 mt-30"
+      className="min-h-screen flex flex-col text-white px-6 w-full md:px-16 lg:px-32 mt-16 md:mt-30 pb-12 md:pb-0"
     >
-      <div className="max-w-1xl mr-auto flex flex-col  ">
-        <h1 className="md:text-5xl font-normal tracking-normal uppercase leading-tight mb-20">
+      <div className="max-w-1xl mr-auto flex flex-col">
+        <h1 className="text-3xl font-bold tracking-normal uppercase leading-tight md:text-5xl md:font-normal mb-10 md:mb-20">
           RESEARCH
         </h1>
       </div>
 
-      <div className="block border-l-6 border-gray-500/60 relative pt-10">
-        <div className="relative">
-          <div className="absolute left-[-0.2rem] top-8 transform -translate-x-1/2 -translate-y-1/2">
+      <div className="relative pt-10 border-l-0 md:border-l-6 md:border-gray-500/60">
+        <div
+          className="relative"
+          ref={(node) => {
+            itemRefs.current[0] = node;
+          }}
+          data-index="0"
+        >
+          <div className="hidden md:absolute md:left-[-0.2rem] md:top-6 md:top-8 md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:block">
             <div
               className={`w-4 h-4 rounded-full ${hoveredIndex === 0 ? "bg-gray-200" : "bg-gray-500"}`}
             ></div>
@@ -26,22 +80,40 @@ const Research = () => {
               2025 - Present
             </span>
           </div>
-          <div className="ml-60 pb-1 self-end pb-20">
-            <h2
-              className="mt-4 text-lg md:text-3xl tracking-wide font-normal self-end pt-"
-              onMouseEnter={() => setIsHoveredIndex(0)}
-              onMouseLeave={() => setIsHoveredIndex(null)}
-            >
-              <span
-                className={`${
-                  hoveredIndex === 0 ? "text-purple-700/80 cursor-pointer" : ""
-                }`}
+          <div className="ml-10 pb-8 md:ml-16 md:pb-14 lg:ml-60 lg:pb-20 self-end">
+            <div className="mt-4 flex items-center justify-between gap-3 md:block">
+              <h2
+                className="text-xl font-bold md:text-3xl tracking-wide font-normal self-end pt-"
+                onMouseEnter={() => !isMobile && setIsHoveredIndex(0)}
+                onMouseLeave={() => !isMobile && setIsHoveredIndex(null)}
+                onClick={(event) => {
+                  if (isMobile) {
+                    event.preventDefault();
+                    setIsHoveredIndex((current) => (current === 0 ? null : 0));
+                  }
+                }}
               >
-                <a href="https://coevolution-project.eu/" target="_blank">
-                  Host-Parasite Coevolution for Robust AI with NEAT
-                </a>
-              </span>
-            </h2>
+                <span
+                  className={`${
+                    hoveredIndex === 0
+                      ? "text-purple-700/80 cursor-pointer"
+                      : ""
+                  }`}
+                >
+                  <a
+                    href="https://coevolution-project.eu/"
+                    target="_blank"
+                    onClick={(event) => isMobile && event.preventDefault()}
+                  >
+                    Host-Parasite Coevolution for Robust AI with NEAT
+                  </a>
+                </span>
+              </h2>
+
+              <div className="md:hidden ml-auto text-[10px] font-medium text-gray-200">
+                2025 - Present
+              </div>
+            </div>
 
             <h4
               className={`text-lg font-extralight ${
@@ -84,8 +156,14 @@ const Research = () => {
           </div>
         </div>
 
-        <div className="relative">
-          <div className="absolute left-[-0.2rem] top-8 transform -translate-x-1/2 -translate-y-1/2">
+        <div
+          className="relative"
+          ref={(node) => {
+            itemRefs.current[1] = node;
+          }}
+          data-index="1"
+        >
+          <div className="hidden md:absolute md:left-[-0.2rem] md:top-6 md:top-8 md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:block">
             <div
               className={`w-4 h-4 rounded-full ${hoveredIndex === 1 ? "bg-gray-200" : "bg-gray-500"}`}
             ></div>
@@ -95,23 +173,41 @@ const Research = () => {
               2022 - 2024
             </span>
           </div>
-          <div className="ml-60 pb-1 self-end pb-20">
-            <h2
-              className="mt-4 text-lg md:text-3xl tracking-wide font-normal self-end"
-              onMouseEnter={() => setIsHoveredIndex(1)}
-              onMouseLeave={() => setIsHoveredIndex(null)}
-            >
-              <span
-                className={`${
-                  hoveredIndex === 1 ? "text-purple-700/80 cursor-pointer" : ""
-                }`}
+          <div className="ml-10 pb-8 md:ml-16 md:pb-14 lg:ml-60 lg:pb-20 self-end">
+            <div className="mt-4 flex items-center justify-between gap-3 md:block">
+              <h2
+                className="text-xl font-bold md:text-3xl tracking-wide font-normal self-end"
+                onMouseEnter={() => !isMobile && setIsHoveredIndex(1)}
+                onMouseLeave={() => !isMobile && setIsHoveredIndex(null)}
+                onClick={(event) => {
+                  if (isMobile) {
+                    event.preventDefault();
+                    setIsHoveredIndex((current) => (current === 1 ? null : 1));
+                  }
+                }}
               >
-                <a href="https://kosbio.com/" target="_blank">
-                  Development of hiPSC Neuromesodermal Organoids for the study
-                  of Friedreich's Ataxia
-                </a>
-              </span>
-            </h2>
+                <span
+                  className={`${
+                    hoveredIndex === 1
+                      ? "text-purple-700/80 cursor-pointer"
+                      : ""
+                  }`}
+                >
+                  <a
+                    href="https://kosbio.com/"
+                    target="_blank"
+                    onClick={(event) => isMobile && event.preventDefault()}
+                  >
+                    Development of hiPSC Neuromesodermal Organoids for the study
+                    of Friedreich's Ataxia
+                  </a>
+                </span>
+              </h2>
+
+              <div className="md:hidden ml-auto text-[10px] font-medium text-gray-200">
+                2022 - 2024
+              </div>
+            </div>
 
             <h4
               className={`text-lg font-extralight ${
@@ -158,8 +254,14 @@ const Research = () => {
           </div>
         </div>
 
-        <div className="relative">
-          <div className="absolute left-[-0.2rem] top-8 transform -translate-x-1/2 -translate-y-1/2">
+        <div
+          className="relative"
+          ref={(node) => {
+            itemRefs.current[2] = node;
+          }}
+          data-index="2"
+        >
+          <div className="hidden md:absolute md:left-[-0.2rem] md:top-6 md:top-8 md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:block">
             <div
               className={`w-4 h-4 rounded-full ${hoveredIndex === 2 ? "bg-gray-200" : "bg-gray-500"}`}
             ></div>
@@ -169,20 +271,34 @@ const Research = () => {
               2023
             </span>
           </div>
-          <div className="ml-60 pb-1 self-end pb-20">
-            <h2
-              className="mt-4 text-lg md:text-3xl tracking-wide font-normal self-end"
-              onMouseEnter={() => setIsHoveredIndex(2)}
-              onMouseLeave={() => setIsHoveredIndex(null)}
-            >
-              <span
-                className={`${
-                  hoveredIndex === 2 ? "text-purple-700/80 cursor-pointer" : ""
-                }`}
+          <div className="ml-10 pb-8 md:ml-16 md:pb-14 lg:ml-60 lg:pb-20 self-end">
+            <div className="mt-4 flex items-center justify-between gap-3 md:block">
+              <h2
+                className="text-xl font-bold md:text-3xl tracking-wide font-normal self-end"
+                onMouseEnter={() => !isMobile && setIsHoveredIndex(2)}
+                onMouseLeave={() => !isMobile && setIsHoveredIndex(null)}
+                onClick={(event) => {
+                  if (isMobile) {
+                    event.preventDefault();
+                    setIsHoveredIndex((current) => (current === 2 ? null : 2));
+                  }
+                }}
               >
-                Age-Related Macular Degeneration (AMD) Research
-              </span>
-            </h2>
+                <span
+                  className={`${
+                    hoveredIndex === 2
+                      ? "text-purple-700/80 cursor-pointer"
+                      : ""
+                  }`}
+                >
+                  Age-Related Macular Degeneration (AMD) Research
+                </span>
+              </h2>
+
+              <div className="md:hidden ml-auto text-[10px] font-medium text-gray-200">
+                2023
+              </div>
+            </div>
             <h4
               className={`text-lg font-extralight ${
                 hoveredIndex === 2 ? "text-purple-600/80" : ""

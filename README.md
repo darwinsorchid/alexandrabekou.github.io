@@ -48,7 +48,7 @@ The goal is to communicate both scientific depth and technical creativity throug
 ### UX Design
 
 - `one-page scroll`
-- `smooth scrolling`
+- `lenis smooth scroll`
 - `magic ui hyper-text`
 - `magic ui terminal`
 - [`particles.js`](https://vincentgarreau.com/particles.js/)
