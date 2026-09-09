@@ -8,6 +8,13 @@ This website is designed as a minimal one-page user experience with subtle motio
 
 ---
 
+![React](https://img.shields.io/badge/React-user-interface-61DAFB?style=flat-square&logo=react&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-styling-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-build_tool-646CFF?style=flat-square&logo=vite&logoColor=white)
+![Magic UI](https://img.shields.io/badge/Magic_UI-animated_components-7C3AED?style=flat-square)
+
+---
+
 ## Overview
 
 This portfolio serves as a central place to present:
