@@ -8,7 +8,7 @@ import Logo from "../assets/pics/icon.png";
 
 const projects = [
   {
-    title: "Numpy NN vs Analytical Function",
+    title: "Numpy NN vs Keras NN",
     // description: "My blog with research notes, tutorials, and experiments.",
     image: DecBound,
     link: "https://github.com/darwinsorchid/nn-from-scratch",
